@@ -107,7 +107,7 @@ lrealpath (filename)
 #if defined (HAVE_REALPATH) && defined (HAVE_UNISTD_H)
   {
     /* Find out the max path size.  */
-    long path_max = pathconf ("/", _PC_PATH_MAX);
+    long path_max = pathconf ("/", PATH_MAX);
     if (path_max > 0)
       {
 	/* PATH_MAX is bounded.  */
